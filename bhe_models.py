@@ -1421,6 +1421,13 @@ class BHE_1U_impl:
 		self.rpo = BheData['odiamP']/2
 		self.dpi = BheData['odiamP']-2*BheData['thickP']
 		self.dpo = BheData['odiamP']
+
+		# fluid properties
+		self.dynviscF = BheData['dynviscF']
+		self.densF = BheData['densF']
+		self.lmF = BheData['lmF']
+		self.length	= BheData['length']
+		self.capF = BheData['capF']
 			
 		# Flow velocity
 		self.dynviscF = BheData['dynviscF']
