@@ -39,6 +39,9 @@ def init_BHEs(nBhe,BheData,dt,nz,type):
 		if BheData['type'] == 'Coax':
 			BHEs = [bhe_models.BHE_Coax_expl() for i in range(nBhe)]
 	
+	# Tundist MUST be float!!!
+	BheData.update({'Tundist': float(BheData.get('Tundist'))})
+
 	for i in range(nBhe):		
 		BHEs[i].setTimestep(dt)
 		BHEs[i].setnz(nz)
